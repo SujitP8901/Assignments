@@ -12,7 +12,7 @@
 
 int Product(int Arr[], int iLength)
 {
-	int iCnt = 0, iMul = 1;
+	int iCnt = 0, iMul = 1, iEven = 0;
 	
 	for(iCnt = 0; iCnt < iLength; iCnt++)
 	{
@@ -20,12 +20,20 @@ int Product(int Arr[], int iLength)
 		{
 			iMul = iMul * Arr[iCnt];
 		}
+		else
+		{
+			iEven++;
+		}
 	}
-	if(iMul == 1)
+	if(iMul == iEven)
 	{
 		return 0;
 	}
-	return iMul;
+	else
+	{
+		return iMul;
+	}
+
 }
 
 int main()
